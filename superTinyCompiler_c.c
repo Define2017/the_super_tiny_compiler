@@ -132,7 +132,7 @@ typedef struct Param
   {
     char *literal;
     struct Express *express;
-  } value; 
+  } value;
   struct Param *next;
 } Param;
 // 表达式
@@ -518,8 +518,8 @@ int main(int argc, char *argv[])
   print_ast(ast);
   const char *code = codeGenerator(ast);
   printf("\n%s", code);
-  free((Token *)tokens);
-  free((AST *)ast);
+  free_token((Token *)tokens);
+  free_AST((AST *)ast);
   free((char *)code);
   return 0;
 }
